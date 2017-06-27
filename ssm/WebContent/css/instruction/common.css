@@ -1,0 +1,193 @@
+.title {
+	margin: 0 auto;
+	padding: 0px;
+	width: 100%;
+	background: #6f6f6f;
+}
+
+.title ul {
+	margin: 0;
+	display: inline-block;
+}
+
+.title li {
+	display: inline-block;
+	padding: 10px;
+}
+
+.title li a {
+	text-decoration: none;
+	color: white;
+}
+
+.title li a:hover {
+	color: #a6a6a6;
+}
+
+.login {
+	float: right;
+	position: relative;
+	top: 10px;
+	right: 10px;
+}
+
+#main {
+	margin: 0 auto;
+	margin-top: 0px;
+	width: 700px;
+	border: solid 1px #999;
+	border-top: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+}
+
+.discuss {
+	padding-left: 40px;
+}
+
+.discuss p {
+	font-size: 20px;
+	fomt-style: strong;
+	color: #007FFF;
+	margin-bottom: 10px;
+}
+
+.discuss p {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+hr {
+	width: 600px;
+	position: relative;
+	right: 50px;
+}
+
+.spe {
+	border: solid 1px red;
+}
+
+.self {
+	width: 100%;
+}
+
+.self img {
+	height: 100px;
+	width: 100px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.writeArea {
+	display: inline;
+}
+
+.writeArea textArea {
+	resize: none;
+	font-size: 14px;
+}
+
+.score {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.xingxing {
+	display: inline-block;
+	position: relative;
+	left: 10px;
+}
+
+#sub_comment {
+	float: right;
+	position: relative;
+	right: 120px;
+}
+
+.other {
+	margin-top: 30px;
+}
+
+.other h4 {
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.each img {
+	width: 50px;
+	height: 50px;
+	vertical-align: top;
+}
+
+.content {
+	display: inline-block;
+	width: 500px;
+	margin-left: 10px;
+}
+
+.author {
+	color: blue;
+}
+
+.time {
+	float: left;
+	font-size: 12px;
+	color: grey;
+}
+
+/*��������*/
+.star-bar-show {
+	background: url(../images/star/iconpic-star-S-default.png) repeat-x 0 0;
+}
+
+.star-bar-show .star {
+	background: url(../images/star/iconpic-star-S.png) repeat-x 0 0
+}
+
+.star-bar-show.size-M {
+	width: 120px;
+	height: 24px
+}
+
+.star-bar-show.size-M, .star-bar-show.size-M .star {
+	background-size: 24px
+}
+
+.star-bar-show.size-M .star {
+	height: 24px
+}
+
+.star-bar-show.size-S {
+	width: 180px;
+	height: 16px
+}
+
+.star-bar-show.size-S, .star-bar-show.size-S .star {
+	background-size: 16px
+}
+
+.star-bar-show.size-S .star {
+	height: 16px
+}
+
+.star-bar {
+	font-size: 0;
+	line-height: 0;
+	display: inline-block;
+}
+
+.star-bar .star {
+	display: inline-block;
+	text-align: center
+}
+/*��*/
+.size-M img {
+	width: 21px;
+	height: 21px;
+}
+/*С*/
+.size-S img {
+	width: 20px;
+	height: 20px
+}

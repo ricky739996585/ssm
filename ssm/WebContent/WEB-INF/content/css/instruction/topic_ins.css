@@ -1,0 +1,87 @@
+.ins {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.topicName {
+	font-size: 20px;
+}
+
+.playbill {
+	display: inline-block;
+	width: 90%;
+	vertical-align: top;
+	text-align:center;
+}
+
+.playbill img {
+	width: 100%;
+}
+
+.right {
+	display: inline-block;
+	width: 550px;
+	text-align:center;
+}
+
+.initiator {
+	color: grey;
+	font-size: 14px;
+	margin-left: 20px;
+}
+
+.initTime {
+	color: blue;
+	font-size: 14px;
+	
+}
+
+.ospe {
+	position: relative;
+	left: 0px;
+	width: 700px;
+}
+
+.topic_content {
+	width:100%;
+	margin-left: 20px;
+	text-indent: 2em;
+	text-align: left;
+}
+
+.reply {
+	margin-bottom: 10px;
+	border: solid 1px #5240d0;
+	padding: 5px;
+}
+
+.reply_author {
+	display: inline-block;
+}
+
+.reply_author p {
+	line-height: 5px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.reply img {
+	width: 100px;
+	height: 100px;
+}
+
+.reply_content {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+	border: solid 1px black;
+	width: 550px;
+	min-height: 150px;
+	padding: 5px;
+}
+
+.sub_reply {
+	position: relative;
+	left: 530px;
+	margin-top: 10px;
+}

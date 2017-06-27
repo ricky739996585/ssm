@@ -1,0 +1,47 @@
+.ins {
+	width: 100%;
+}
+
+.musicName {
+	font-size: 20px;
+}
+
+.playbill {
+	display: inline-block;
+	width: 150px;
+	vertical-align: top;
+}
+
+.playbill img {
+	width: 100%;
+}
+
+.right {
+	display: inline-block;
+	width: 500px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.center li {
+	display: inline;
+}
+
+.bottom {
+	width: 450px;
+	position: relative;
+	left: 40px;
+}
+
+.pro {
+	color: grey;
+}
+
+audio {
+	width: 100%;
+	position: fixed;
+	display: none;
+	bottom:0px;
+}

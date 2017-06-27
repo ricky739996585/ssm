@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+    <package name="default" namespace="/" extends="struts-default">
+		<interceptors>
+		<!-- 声明拦截器 -->
+			<interceptor name="adminInter" class="com.ricky.interceptor.adminInterceptor">
+				<param name="excludeMethods">admin</param>
+			</interceptor>
+			<interceptor-stack name="adminInterceptorStack">
+				<interceptor-ref name="adminInter"/>
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="adminInterceptorStack"></default-interceptor-ref>
+        <action name="*">  
+      		<result>/WEB-INF/content/{1}.jsp</result>
+      		<result>/WEB-INF/admin/{1}.jsp</result>
+      	</action>
+    </package>
+	<package name="user" namespace="/" extends="default">
+		<action name="admin" class="com.ricky.action.UserAction" method="admin">
+			<result name="success">/WEB-INF/admin/admin.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+		
+		<action name="getAllUser" class="com.ricky.action.UserAction" method="getAllUser">
+			<result name="success">/WEB-INF/admin/admin.jsp</result>
+		</action>
+		
+		<action name="getUser" class="com.ricky.action.UserAction" method="getUser">
+			<result name="success">/WEB-INF/admin//updateUser.jsp</result>
+		</action>
+		
+		<action name="findUserByName" class="com.ricky.action.UserAction" method="findUserByName">
+			<result name="success">/WEB-INF/admin/admin.jsp</result>
+		</action>
+		
+		<action name="findUserById" class="com.ricky.action.UserAction" method="findUserById">
+			<result name="success">/WEB-INF/content/show.jsp</result>
+		</action>
+		
+		<action name="deleteUser" class="com.ricky.action.UserAction" method="deleteUser">
+			<result name="success" type="chain">getAllUser</result>
+		</action>
+		
+		<action name="updateUser" class="com.ricky.action.UserAction" method="updateUser">
+			<result name="success" type="chain">getAllUser</result>
+		</action>
+		
+		<action name="insertUser" class="com.ricky.action.UserAction" method="insertUser">
+			<result name="success" type="chain">getAllUser</result>
+		</action>
+		
+		 <action name="*">  
+      		<result>/WEB-INF/content/{1}.jsp</result>
+      		<result>/WEB-INF/admin/{1}.jsp</result>
+      	</action>
+        
+	</package>
+	
+	<package name="music" namespace="/" extends="default">
+		<action name="getAllMusic" class="com.ricky.action.MusicAction" method="getAllMusic">
+			<result name="success">/WEB-INF/admin/adminMusic.jsp</result>
+		</action>
+		
+		<action name="findMusicByName" class="com.ricky.action.MusicAction" method="findMusicByName">
+			<result name="success">/WEB-INF/admin/adminMusic.jsp</result>
+		</action>
+		
+		<action name="getMusic" class="com.ricky.action.MusicAction" method="getMusic">
+			<result name="success">/WEB-INF/admin/updateMusic.jsp</result>
+		</action>
+		
+		<action name="updateMusic" class="com.ricky.action.MusicAction" method="updateMusic">
+			<result name="success" type="chain">getAllMusic</result>
+		</action>
+		
+		<action name="insertMusic" class="com.ricky.action.MusicAction" method="insertMusic">
+			<result name="success" type="chain">getAllMusic</result>
+		</action>
+		
+		<action name="deleteMusic" class="com.ricky.action.MusicAction" method="deleteMusic">
+			<result name="success" type="chain">getAllMusic</result>
+		</action>
+		
+		<action name="getCollectMusic" class="com.ricky.action.MusicAction" method="getCollectMusic">
+			<result name="success">/WEB-INF/admin/collectMusic.jsp</result>
+		</action>
+		
+		<action name="getReplyMusic" class="com.ricky.action.MusicAction" method="getReplyMusic">
+			<result name="success">/WEB-INF/admin/replyMusic.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="film" namespace="/" extends="default">
+		<action name="getAllFilm" class="com.ricky.action.FilmAction" method="getAllFilm">
+			<result name="success">/WEB-INF/admin/adminFilm.jsp</result>
+		</action>
+		
+		<action name="findFilmByName" class="com.ricky.action.FilmAction" method="findFilmByName">
+			<result name="success">/WEB-INF/admin/adminFilm.jsp</result>
+		</action>
+		
+		<action name="getFilm" class="com.ricky.action.FilmAction" method="getFilm">
+			<result name="success">/WEB-INF/admin/updateFilm.jsp</result>
+		</action>
+		
+		<action name="updateFilm" class="com.ricky.action.FilmAction" method="updateFilm">
+			<result name="success" type="chain">getAllFilm</result>
+		</action>
+		
+		<action name="insertFilm" class="com.ricky.action.FilmAction" method="insertFilm">
+			<result name="success" type="chain">getAllFilm</result>
+		</action>
+		
+		
+		<action name="deleteFilm" class="com.ricky.action.FilmAction" method="deleteFilm">
+			<result name="success" type="chain">getAllFilm</result>
+		</action>
+		
+		<action name="getCollectFilm" class="com.ricky.action.FilmAction" method="getCollectFilm">
+			<result name="success">/WEB-INF/admin/collectFilm.jsp</result>
+		</action>
+		
+		<action name="getReplyFilm" class="com.ricky.action.FilmAction" method="getReplyFilm">
+			<result name="success">/WEB-INF/admin/replyFilm.jsp</result>
+		</action>
+		
+		<action name="getAllFilmForPic" class="com.ricky.action.FilmAction" method="getAllFilmForPic">
+			<result name="success">/WEB-INF/admin/insertFilmPic.jsp</result>
+		</action>
+		
+		<action name="insertFilmPic" class="com.ricky.action.FilmAction" method="insertFilmPic">
+			<result name="success" type="chain">getAllFilm</result>
+		</action>
+		
+	</package>
+	
+	<package name="book" namespace="/" extends="default">
+		<action name="getAllBook" class="com.ricky.action.BookAction" method="getAllBook">
+			<result name="success">/WEB-INF/admin/adminBook.jsp</result>
+		</action>
+		
+		<action name="findBookByName" class="com.ricky.action.BookAction" method="findBookByName">
+			<result name="success">/WEB-INF/admin/adminBook.jsp</result>
+		</action>
+		
+		<action name="getBook" class="com.ricky.action.BookAction" method="getBook">
+			<result name="success">/WEB-INF/admin/updateBook.jsp</result>
+		</action>
+		
+		<action name="updateBook" class="com.ricky.action.BookAction" method="updateBook">
+			<result name="success" type="chain">getAllBook</result>
+		</action>
+		
+		<action name="insertBook" class="com.ricky.action.BookAction" method="insertBook">
+			<result name="success" type="chain">getAllBook</result>
+		</action>
+		
+		
+		<action name="deleteBook" class="com.ricky.action.BookAction" method="deleteBook">
+			<result name="success" type="chain">getAllBook</result>
+		</action>
+		
+		<action name="getCollectBook" class="com.ricky.action.BookAction" method="getCollectBook">
+			<result name="success">/WEB-INF/admin/collectBook.jsp</result>
+		</action>
+		
+		<action name="getReplyBook" class="com.ricky.action.BookAction" method="getReplyBook">
+			<result name="success">/WEB-INF/admin/replyBook.jsp</result>
+		</action>
+	</package>
+	
+	<package name="acty" namespace="/" extends="default">
+		<action name="getAllActy" class="com.ricky.action.ActyAction" method="getAllActy">
+			<result name="success">/WEB-INF/admin/adminActy.jsp</result>
+		</action>
+		
+		<action name="findActyByTitle" class="com.ricky.action.ActyAction" method="findActyByTitle">
+			<result name="success">/WEB-INF/admin/adminActy.jsp</result>
+		</action>
+		
+		<action name="getActy" class="com.ricky.action.ActyAction" method="getActy">
+			<result name="success">/WEB-INF/admin/updateActy.jsp</result>
+		</action>
+		
+		<action name="updateActy" class="com.ricky.action.ActyAction" method="updateActy">
+			<result name="success" type="chain">getAllActy</result>
+		</action>
+		
+		<action name="getUserActy" class="com.ricky.action.UserAction" method="getAllUser">
+			<result name="success">/WEB-INF/admin/insertActy.jsp</result>
+		</action>
+		
+		<action name="insertActy" class="com.ricky.action.ActyAction" method="insertActy">
+			<result name="success" type="chain">getAllActy</result>
+		</action>
+		
+		
+		<action name="deleteActy" class="com.ricky.action.ActyAction" method="deleteActy">
+			<result name="success" type="chain">getAllActy</result>
+		</action>
+		
+		<action name="getStatus" class="com.ricky.action.ActyAction" method="getStatus">
+			<result name="success">/WEB-INF/admin/reviewActy.jsp</result>
+		</action>
+		
+		<action name="updateStatus" class="com.ricky.action.ActyAction" method="updateStatus">
+			<result name="success" type="chain">getStatus</result>
+		</action>
+		
+		<action name="searchActy" class="com.ricky.action.ActyAction" method="searchActy">
+			<result name="success">/WEB-INF/admin/Acty.jsp</result>
+		</action>
+		
+		<action name="getReply" class="com.ricky.action.ActyAction" method="getReply">
+			<result name="success">/WEB-INF/admin/replyActy.jsp</result>
+		</action>
+	</package>
+	
+	<package name="page" namespace="/" extends="struts-default">
+		<action name="login" class="com.ricky.PageAction.PageAction" method="login">
+			<result name="success" type="chain">index</result>
+		</action>
+		
+		<action name="index" class="com.ricky.PageAction.PageAction" method="index">
+			<result name="success">/WEB-INF/content/index.jsp</result>
+		</action>
+		
+		<action name="searchAll" class="com.ricky.PageAction.PageAction" method="searchAll">
+			<result name="success">/WEB-INF/content/searchAll.jsp</result>
+		</action>
+		
+		<action name="register" class="com.ricky.PageAction.PageAction" method="register">
+			<result name="success" type="chain">index</result>
+		</action>
+		
+		<action name="instructUser" class="com.ricky.PageAction.PageAction" method="instructUser">
+			<result name="success">/WEB-INF/content/instructUser.jsp</result>
+		</action>
+		
+		<action name="searchUser" class="com.ricky.PageAction.PageAction" method="searchUser">
+			<result name="success">/WEB-INF/content/searchUser.jsp</result>
+		</action>
+		
+		<action name="userForUpdate" class="com.ricky.PageAction.PageAction" method="userForUpdate">
+			<result name="success">/WEB-INF/content/userForUpdate.jsp</result>
+		</action>
+		
+		<action name="modifyUser" class="com.ricky.PageAction.PageAction" method="modifyUser">
+			<result name="success" type="chain">instructUser</result>
+		</action>
+		
+		<action name="cancel" class="com.ricky.PageAction.PageAction" method="cancel">
+			<result name="success" type="chain">index</result>
+		</action>
+		
+		
+		<action name="music" class="com.ricky.PageAction.MusicAction" method="music">
+			<result name="success">/WEB-INF/content/music.jsp</result>
+		</action>
+		
+		<action name="musicType" class="com.ricky.PageAction.MusicAction" method="musicType">
+			<result name="success">/WEB-INF/content/music.jsp</result>
+		</action>
+		
+		<action name="musicSearch" class="com.ricky.PageAction.MusicAction" method="musicSearch">
+			<result name="success">/WEB-INF/content/music.jsp</result>
+		</action>
+		
+		<action name="musicInstruct" class="com.ricky.PageAction.MusicAction" method="musicInstruct">
+			<result name="success">/WEB-INF/content/instructMusic.jsp</result>
+		</action>
+		
+		<action name="collectMusic" class="com.ricky.PageAction.MusicAction" method="collectMusic">
+			<result name="success" type="chain">music</result>
+			<result name="login" type="chain">index</result>
+		</action>
+		
+		<action name="replyMusic" class="com.ricky.PageAction.MusicAction" method="replyMusic">
+			<result name="success" type="redirect">/musicInstruct.action?musicBean.music_id=${music_id}</result>
+			<result name="login" type="chain">index</result>
+		</action>
+		
+		
+		<action name="film" class="com.ricky.PageAction.FilmAction" method="film">
+			<result name="success">/WEB-INF/content/film.jsp</result>
+		</action>
+		
+		<action name="filmType" class="com.ricky.PageAction.FilmAction" method="filmType">
+			<result name="success">/WEB-INF/content/film.jsp</result>
+		</action>
+		
+		<action name="filmSearch" class="com.ricky.PageAction.FilmAction" method="filmSearch">
+			<result name="success">/WEB-INF/content/film.jsp</result>
+		</action>
+		
+		<action name="filmInstruct" class="com.ricky.PageAction.FilmAction" method="filmInstruct">
+			<result name="success">/WEB-INF/content/instructFilm.jsp</result>
+		</action>
+		
+		<action name="collectFilm" class="com.ricky.PageAction.FilmAction" method="collectFilm">
+			<result name="success" type="chain">film</result>
+			<result name="login" type="chain">index</result>
+		</action>
+		
+		<action name="replyFilm" class="com.ricky.PageAction.FilmAction" method="replyFilm">
+			<result name="success" type="redirect">/filmInstruct.action?filmBean.film_id=${film_id}</result>
+			<result name="login" type="chain">index</result>
+		</action>
+		
+		<action name="book" class="com.ricky.PageAction.BookAction" method="book">
+			<result name="success">/WEB-INF/content/book.jsp</result>
+		</action>
+		
+		<action name="bookType" class="com.ricky.PageAction.BookAction" method="bookType">
+			<result name="success">/WEB-INF/content/book.jsp</result>
+		</action>
+		
+		<action name="bookSearch" class="com.ricky.PageAction.BookAction" method="bookSearch">
+			<result name="success">/WEB-INF/content/book.jsp</result>
+		</action>
+		
+		<action name="bookInstruct" class="com.ricky.PageAction.BookAction" method="bookInstruct">
+			<result name="success">/WEB-INF/content/instructBook.jsp</result>
+		</action>
+		
+		<action name="collectBook" class="com.ricky.PageAction.BookAction" method="collectBook">
+			<result name="success" type="chain">book</result>
+			<result name="login" type="chain">index</result>
+		</action>
+		
+		<action name="replyBook" class="com.ricky.PageAction.BookAction" method="replyBook">
+			<result name="success" type="redirect">/bookInstruct.action?bookBean.book_id=${book_id}</result>
+			<result name="login" type="chain">index</result>
+		</action>
+		
+		<action name="topic" class="com.ricky.PageAction.TopicAction" method="topic">
+			<result name="success">/WEB-INF/content/topic.jsp</result>
+		</action>
+		
+		<action name="topicType" class="com.ricky.PageAction.TopicAction" method="topicType">
+			<result name="success">/WEB-INF/content/topic.jsp</result>
+		</action>
+		
+		<action name="topicInstruct" class="com.ricky.PageAction.TopicAction" method="topicInstruct">
+			<result name="success">/WEB-INF/content/instructTopic.jsp</result>
+		</action>
+		
+		<action name="insertTopic" class="com.ricky.PageAction.TopicAction" method="insertTopic">
+			<result name="success" type="chain">topic</result>
+			<result name="login" type="chain">index</result>
+		</action>
+		
+		<action name="replyTopic" class="com.ricky.PageAction.TopicAction" method="replyTopic">
+			<result name="success" type="redirect">/topicInstruct.action?actyBean.acty_id=${acty_id}</result>
+			<result name="login" type="chain">index</result>
+		</action>
+		
+		<action name="*">  
+      		<result>/WEB-INF/content/{1}.jsp</result>
+      		<result>/WEB-INF/admin/{1}.jsp</result>
+      	</action>
+	</package>
+</struts>

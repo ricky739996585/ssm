@@ -1,0 +1,37 @@
+.ins {
+	width: 100%;
+}
+
+.bookName {
+	font-size: 20px;
+}
+
+.playbill {
+	display: inline-block;
+	width: 150px;
+}
+
+.playbill img {
+	width: 100%;
+}
+
+.right {
+	display: inline-block;
+}
+
+.pro {
+	color: grey;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.right {
+	display: inline-block;
+	width: 500px;
+}
+
+.right ul {
+	position: relative;
+}

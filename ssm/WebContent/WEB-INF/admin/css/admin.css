@@ -1,0 +1,71 @@
+/*�û���Ϣ�������*/
+body {
+	margin: 0 auto;
+	width: 600px;
+}
+
+#main {
+	text-align: center;
+	width: 580px;
+	height: 420px;
+	padding: 10px;
+	margin: 0 auto;
+	background: url(../images/ling.jpg);
+}
+
+#username {
+	text-align: left;
+}
+
+.spe {
+	background-color: #7093DB;
+	padding: 5px 0 5px 5px;
+}
+
+.red {
+	color: red;
+	margin-left: 5px;
+}
+
+#admin img {
+	width: 100px;
+	height: 100%;
+	cursor: pointer;
+	border: solid 0.5px;
+}
+
+.ima {
+	width: 110px;
+	height: 120px;
+}
+
+.toRight {
+	text-align: right;
+	padding-right: 10px;
+	width: 30%;
+}
+
+td,th {
+	padding-top: 8px;
+	text-align: left;
+}
+
+.form_buttons {
+	margin-top: 10px;
+}
+
+input[type="text"] {
+	width: 20em;
+}
+
+input:read-only{
+background-color: yellow;
+} 
+
+input[type="file"] {
+	display: none;
+}
+
+.disabled {
+	disabled: disabled;
+}

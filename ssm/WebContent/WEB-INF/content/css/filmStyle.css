@@ -1,0 +1,99 @@
+.review-slider {
+	background: #fff;
+	padding: 2em 0;
+}
+.slide-title h4 {
+	padding: 10px 8px;
+	color: #000;
+	display: block;
+	background-color: #fff;
+	height: 65px;
+	overflow:hidden;
+	font-size: 1.05em;
+	font-weight: 600;
+	line-height:1.4em;
+	text-align:left;
+	font-family: 'Oxygen', sans-serif;
+}
+.date-city {
+	  background-color: #FCFCFC;
+	padding: 12px 16px;
+	text-align: left;
+	position:relative;
+}
+.date-city h5 {
+	  color: #007DD3;
+  font-size: 0.7em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+.date-city h6 {
+	  color: #000;
+  font-size: 0.95em;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.buy-tickets {
+	background-color:#fff;
+	padding:8px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.buy-tickets a {
+	text-align: center;
+    color: #fff;
+	padding: 9px;
+	background: #003b64;
+	display: block;
+	font-size: 0.95em;
+	font-weight: 600;
+	text-decoration: none;
+}
+.buy-tickets a:hover {
+	color: #000;
+    background-color: #fff200;
+}
+
+.nbs-flexisel-item:hover div.buy-tickets {
+	display:block;
+	width: 100%;
+}
+.nbs-flexisel-inner {
+	overflow: hidden;
+	  padding: 2em 0;
+}
+.nbs-flexisel-container {
+	position: relative;
+	max-width: 100%;
+}
+
+
+@media(max-width:320px){
+	.slide-title h4 {
+		height: 48px;
+		overflow: hidden;
+	}
+}
+
+@media(max-width:640px){
+	.review-slider {
+		padding: 1em 0 2em 0;
+	}
+}
+
+@media(max-width:1024px){
+	.slide-title h4 {
+		padding: 8px 6px;
+		height: 55px;
+		font-size: 0.93em;
+	}
+	.nbs-flexisel-inner {
+		padding: 0 0 2em 0;
+	}
+	
+}
+
+
+

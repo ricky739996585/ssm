@@ -1,0 +1,211 @@
+.index_capital {
+	width: 100%;
+	margin-top: 20px;
+	height: 250px;
+}
+
+.ind_left_sidebar {
+	width: 10%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.title {
+	font-size: 18px;
+	color: #1a1c7d;
+	margin-bottom: 5px;
+	border-bottom-style: solid;
+	border-color: #7093DB;
+}
+
+.ind_left_sidebar ul {
+	list-style-type: none;
+}
+
+.ind_content {
+	width: 70%;
+	display: inline-block;
+	position: relative;
+	left: 70px;
+}
+
+.ind_right_sidebar {
+	width: 15%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#home {
+	
+}
+
+#load {
+	position: relative;
+	left: 350px;
+	font-size: 14px;
+	color: blue;
+}
+
+.login {
+	background-color: transparent;
+	color: black;
+	border: 0px solid;
+	position: relative;
+	top: 10px;
+	left: 150px;
+	text-decoration: underline;
+	color: blue;
+}
+
+#nick {
+	display: none;
+}
+
+.same_mod {
+	margin: 5px 0px 10px 0px;
+}
+
+.recommend {
+	display: block;
+}
+
+.recommend a {
+	float: right;
+	text-decoration: none;
+	font-size: 14px;
+	position: relative;
+	top: 5px;
+}
+
+.eachInfo {
+	border: solid 1px #C0C0C0;
+	width: 120px;
+	padding: 5px;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+.tr_one {
+	margin-left: 5px;
+}
+
+.tr_nOne {
+	margin-left: 3%;
+}
+
+#classfiy li:hover {
+	cursor: pointer;
+}
+
+.page {
+	width: 750px;
+}
+
+.page input[type="text"] {
+	width: 2em;
+	margin: 0 2px 0 2px;
+}
+
+.page input[type="text"]:hover {
+	border: 2px solid #7093DB;
+}
+
+.page span, .page input[type="button"] {
+	width: 16%;
+	margin: 5px 0 10px 4%;
+}
+
+.page input[type="button"] {
+	background-color: #D9D9F3;
+}
+
+.page input[type="button"]:hover {
+	background: #7093DB;
+	color: white;
+}
+
+.star-bar-show {
+	background: url(../images/star/iconpic-star-S-default.png) repeat-x 0 0
+}
+
+.star-bar-show .star {
+	background: url(../images/star/iconpic-star-S.png) repeat-x 0 0
+}
+
+.star-1 {
+	width: 20%
+}
+
+.star-2 {
+	width: 40%
+}
+
+.star-3 {
+	width: 60%
+}
+
+.star-4 {
+	width: 80%
+}
+
+.star-5 {
+	width: 100%
+}
+
+.star-bar-show.size-M {
+	width: 120px;
+	height: 24px
+}
+
+.star-bar-show.size-M, .star-bar-show.size-M .star {
+	background-size: 24px
+}
+
+.star-bar-show.size-M .star {
+	height: 24px
+}
+
+.star-bar-show.size-S {
+	width: 80px;
+	height: 16px
+}
+
+.star-bar-show.size-S, .star-bar-show.size-S .star {
+	background-size: 16px
+}
+
+.star-bar-show.size-S .star {
+	height: 16px
+}
+
+.star-bar {
+	font-size: 0;
+	line-height: 0
+}
+
+.star-bar .star {
+	display: inline-block;
+	text-align: center
+}
+
+.size-M img {
+	width: 24px;
+	height: 24px
+}
+
+.size-S img {
+	width: 16px;
+	height: 16px
+}
+
+.avatar{display:inline-block;position:relative; overflow:hidden}
+.avatar img{ display:block}
+.avatar.radius,.avatar.radius img{border-radius:50%}
+.avatar,.avatar img{width:32px; height:32px}
+.avatar.size-MINI{ width:16px;height:16px}
+.avatar.size-S,.avatar.size-S img{width:24px; height:24px}
+.avatar.size-M,.avatar.size-M img{width:32px; height:32px}/*默认为中，可以不写，可以理解为：均码*/
+.avatar.size-L,.avatar.size-L img{width:40px; height:40px}
+.avatar.size-XL,.avatar.size-XL img{width:64px; height:64px}
+.avatar.size-XXL,.avatar.size-XXL img{width:100px; height:100px}
+.avatar.size-XXXL,.avatar.size-XXXL img{width:128px; height:128px

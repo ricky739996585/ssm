@@ -1,0 +1,61 @@
+.ins {
+	width: 100%;
+	text-align: center;
+}
+
+.filmName {
+	font-size: 20px;
+	text-align: left;
+	color: #5353ff;
+	margin: 5px 0 10px 0;
+}
+
+.playbill {
+	display: inline-block;
+	width: 100%;
+}
+
+.playbill img {
+	width: 100%;
+}
+
+.detail {
+	text-align: left;
+}
+
+.ins ul {
+	list-style-type: none;
+}
+
+.ins li {
+	width: 350px;
+}
+
+.pro {
+	color: grey;
+}
+
+.summary {
+	width: 100%;
+	text-align: left;
+	font-size:18px;
+}
+
+p:first-child {
+	color: blue;
+}
+
+p:nth-child(2) {
+	color: blue;
+	text-indent: 2em;
+}
+
+.row{
+	display: inline-block;
+	width: 100%;
+	padding-right: 2%;
+}
+
+.row img {
+	width: 100%;
+}
